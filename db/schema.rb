@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807124619) do
+ActiveRecord::Schema.define(version: 20150807125537) do
 
   create_table "training_contents", force: :cascade do |t|
     t.string   "name"
-    t.integer  "user_id"
+    t.integer  "trainer_id"
     t.string   "content"
     t.string   "purpose"
     t.string   "sports_type"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150807124619) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "training_contents", ["user_id"], name: "index_training_contents_on_user_id"
+  add_index "training_contents", ["trainer_id"], name: "index_training_contents_on_trainer_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
