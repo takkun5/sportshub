@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   root to: 'welcomes#home'
   get 'player_signup', to: 'players#new'
+  get 'trainer_signup', to: 'trainers#new'
   
   resources :users
   resources :players
+  resources :trainers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
