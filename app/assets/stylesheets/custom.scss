@@ -69,7 +69,7 @@ header {
 }
 
 #logo:hover {
-  color: #fff;
+  color: white;
   text-decoration: none; 
 }
 
@@ -129,3 +129,9 @@ input {
     color: $state-danger-text;
   }
 }
+
+#signup_link {
+  font-size: 0.9em;
+  line-height: 0.5em;
+}
+  
