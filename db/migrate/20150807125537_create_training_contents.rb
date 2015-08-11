@@ -12,6 +12,7 @@ class CreateTrainingContents < ActiveRecord::Migration
       t.integer :price
 
       t.timestamps null: false
+      
     end
   end
 end

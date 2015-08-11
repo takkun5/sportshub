@@ -1,2 +1,24 @@
-<h1>Welcomes#home</h1>
-<p>Find me in app/views/welcomes/home.html.erb</p>
+<% if current_user.instance_of? Trainer %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="training_content_form">
+        <%= render 'shared/training_content_form' %>
+      </section>
+    </aside>
+  </div>
+<% end %>
+
+<% if current_user.instance_of? Player %>
+
+  <% training_contents.each do |tr| %>
+  <% tr.title %>
+  <% tr.content %>
+  <% end %>
+  
+<% end %>
+
+
+
