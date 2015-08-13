@@ -3,4 +3,7 @@
   <%= @trainer.name %>
 </h1>
 
+<%= render 'follow_form' if logged_in? %>
+
 <%= render @training_contents %>
+

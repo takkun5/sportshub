@@ -1,7 +1,9 @@
 class PlayersController < ApplicationController
+  before_action :set_player,
+                only: [:show, :edit, :update, :destroy]
   
   def show
-    @player = Player.find(params[:id])  
+    @player = Player.find(params[:id])
   end
   
   def new
@@ -23,6 +25,11 @@ class PlayersController < ApplicationController
   def player_params
     params.require(:player).permit(:name, :email, :age, :profile, :sports_type, :place,  :password, 
                                    :password_confirmation)
-    
   end
+  
+  def set_player
+    @player = Player.find(params[:id])
+  end
+  
+  
 end

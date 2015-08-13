@@ -7,7 +7,7 @@ class WelcomesController < ApplicationController
    
     # if params[:type] == "Player"
     if current_user.instance_of? Player
-      @training_content = TrainingContents.all
+      @training_content = training_contents.all
     end  
     
     if current_user.instance_of? Trainer
