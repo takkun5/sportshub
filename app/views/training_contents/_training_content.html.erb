@@ -1,0 +1,7 @@
+<h2>トレーニングプラン</h2>
+<%= training_content.name %>
+<%= training_content.content %>
+<% if current_user == training_content.trainer %>
+      <%= link_to "delete", training_content, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+<% end %>

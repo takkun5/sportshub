@@ -1,6 +1,7 @@
 class TrainersController < ApplicationController
   def show
     @trainer = Trainer.find(params[:id])  
+    @training_contents = @trainer.training_contents
   end
   
   def new

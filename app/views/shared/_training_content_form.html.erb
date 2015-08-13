@@ -1,0 +1,37 @@
+<%= form_for(@training_content) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <h1>トレーニングプラン</h1> 
+    <div class ="training_plan">
+        
+        <%= f.label :name, 'タイトル' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        
+        
+        <%= f.label :content, '内容' %>
+        <%= f.select :sports_type, ['陸上',
+'水泳',
+'体操',
+'自転車',
+'格闘技',
+'テニス',
+'サッカー',
+'野球',
+'ソフトボール',
+'アメリカンフットボール',
+'ラグビー',
+'ゴルフ',
+'ボーリング',
+'ラクロス',
+'卓球',
+'バスケットボール',
+'スキー',
+'スノーボード',
+'他のスポーツ'] ,{ include_blank: 'スポーツの種類を選択してください' }, class: 'form-control' %>
+
+        <%= f.text_area :content, class: 'form-control', placeholder: "提供するサービスの概要を記入してください" %>
+    </div>
+    
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
