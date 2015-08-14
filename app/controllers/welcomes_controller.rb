@@ -1,6 +1,10 @@
 class WelcomesController < ApplicationController
   def home
     
+    #トップ画面にプランを表示する
+     @training_contents = TrainingContent.all
+     
+     
     # トレーナーだったら
     # if current_user.instance_of? Trainer
     # if current_user.instace_of? Player

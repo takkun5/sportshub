@@ -22,5 +22,7 @@
   
 <% end %>
 
-
-
+<% if logged_in? %>
+<h1>一覧</h1>
+<%= render 'training_contents/list'  %>
+<% end %>
