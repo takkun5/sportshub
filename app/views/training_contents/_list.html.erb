@@ -1,3 +1,4 @@
 <% @training_contents.each do |training_content| %>
      <%= training_content.name %>
+     <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
 <% end %>
