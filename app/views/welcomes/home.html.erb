@@ -12,11 +12,13 @@
 <% end %>
 
 <% if current_user.instance_of? Player %>
+  <%= render 'shared/user_info' %>
 
-  <% training_contents.each do |tr| %>
-  <% tr.title %>
-  <% tr.content %>
-  <% end %>
+
+  <% # @training_contents.each do |tr| %>
+  <% #tr.title %>
+  <% #tr.content %>
+  <% #end %>
   
 <% end %>
 
