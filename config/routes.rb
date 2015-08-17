@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
   root to: 'welcomes#home'
   get 'player_signup', to: 'players#new'
   get 'trainer_signup', to: 'trainers#new'

@@ -21,11 +21,29 @@ class TrainersController < ApplicationController
     end
   end
   
+  def edit
+   @trainer = current_user
+ end
+ 
+  def update
+   @trainer = current_user
+   if @trainer.update(trainer_profile)
+      flash[:success]= "プロフィールを変更しました。" 
+      redirect_to trainer_path(@trainer)
+   else
+     render 'edit'
+   end
+  end   
+  
   private
   
   def trainer_params
     params.require(:trainer).permit(:name, :email, :age, :profile, :speciality, :sports_type, :place,  :password, 
                                    :password_confirmation)
+  end
+  
+  def trainer_profile
+    params.require(:trainer).permit(:name, :email, :age,  :profile, :sports_type, :place, :password)
   end
   
   def set_trainer
