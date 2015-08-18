@@ -1,6 +1,12 @@
 <h2>トレーニングプラン</h2>
 <%= training_content.name %>
 <%= training_content.content %>
+<span class="image">
+    <% if training_content.image.present? %>
+     <%= image_tag training_content.image.url  %>
+    <% end %>
+  </span>
+  
 <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
 
 <% if current_user == training_content.trainer %>

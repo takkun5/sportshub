@@ -9,7 +9,8 @@
         
         
         <%= f.label :content, '内容' %>
-        <%= f.select :sports_type, ['陸上',
+        <%= f.select :sports_type, ['特になし',
+'陸上',
 '水泳',
 '体操',
 '自転車',
@@ -30,6 +31,10 @@
 '他のスポーツ'] ,{ include_blank: 'スポーツの種類を選択してください' }, class: 'form-control' %>
 
         <%= f.text_area :content, class: 'form-control', placeholder: "提供するサービスの概要を記入してください" %>
+        
+        <%= f.file_field :image ,class: 'form-control' %>
+        <%= f.hidden_field :image_cache %>
+    
     </div>
     
   </div>

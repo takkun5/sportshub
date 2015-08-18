@@ -1,4 +1,10 @@
 <% @training_contents.each do |training_content| %>
      <%= training_content.name %>
      <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
+     <span class="image">
+     <% if training_content.image.present? %>
+     <%= image_tag training_content.image.url  %>
+     <% end %>
+     </span>
+  
 <% end %>
