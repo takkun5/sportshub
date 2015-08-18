@@ -31,7 +31,7 @@ class TrainingContentsController < ApplicationController
     private
     def training_content_params
         params.require(:training_content).permit(:name, :content,  
-                        :sports_type, :image)
+                        :sports_type, :purpose, :lengths, :image)
         
     end
     

@@ -30,9 +30,28 @@
 'スノーボード',
 '他のスポーツ'] ,{ include_blank: 'スポーツの種類を選択してください' }, class: 'form-control' %>
 
+        <%= f.select :purpose, ['リハビリ',
+'栄養管理',
+'筋肉強化',
+'コンディショニング調整',
+'メンタルトレーニング',
+'ダイエット',
+'体重増加',
+'コーチング',
+'その他',
+] ,{ include_blank: 'プランのカテゴリーを選択してください' }, class: 'form-control' %>
+        
+        
+      <%= f.label :lengths, 'プランの日数を数字のみ記入してください' %>
+      <div id ="lengths">
+      <%= f.text_field :lengths, class: 'form-control' %>
+      </div>
+
         <%= f.text_area :content, class: 'form-control', placeholder: "提供するサービスの概要を記入してください" %>
         
-        <%= f.file_field :image ,class: 'form-control' %>
+        
+        <%= f.label :image, 'プランのイメージ写真を添付してください' %>
+        <%= f.file_field :image , class: 'form-control' %>
         <%= f.hidden_field :image_cache %>
     
     </div>
