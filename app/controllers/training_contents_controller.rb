@@ -25,7 +25,21 @@ class TrainingContentsController < ApplicationController
     @training_content.destroy
     flash[:success] = "プランを消去しました。"
     redirect_to request.referrer || root_url
-  end
+    end
+    
+    def edit
+    @training_content = current_user.training_contents
+    end
+ 
+  def update
+    @training_content = current_user.training_contents.find_by(id: params[:id])
+    return redirect_to root_url if @training_content.nil?
+    @training_content.update
+    flash[:success] = "プランを編集しました。"
+    redirect_to request.referrer || root_url
+   else
+     render 'edit'
+   end
 
     
     private

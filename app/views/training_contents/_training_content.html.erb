@@ -10,6 +10,8 @@
 <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
 
 <% if current_user == training_content.trainer %>
-      <%= link_to "delete", training_content, method: :delete,
+      <%= link_to "[edit]" , edit_training_content_path %>
+      
+      <%= link_to "[delete]", training_content, method: :delete,
                                        data: { confirm: "You sure?" } %>
 <% end %>
