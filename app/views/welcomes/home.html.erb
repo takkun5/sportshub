@@ -1,26 +1,6 @@
 <%= render 'shared/cover' %>
 
-<% if current_user.instance_of? Trainer %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-  </div>
-<% end %>
-
-<% if current_user.instance_of? Player %>
-  <%= render 'shared/user_info' %>
-
-
-  <% # @training_contents.each do |tr| %>
-  <% #tr.title %>
-  <% #tr.content %>
-  <% #end %>
-  
-<% end %>
 
 <% if logged_in? %>
-<h1>一覧</h1>
 <%= render 'training_contents/list'  %>
 <% end %>

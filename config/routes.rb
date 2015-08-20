@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  
+
   root to: 'welcomes#home'
+  get 'help', to: 'help#home'
   get 'player_signup', to: 'players#new'
   get 'trainer_signup', to: 'trainers#new'
   get    'login'   => 'sessions#new'

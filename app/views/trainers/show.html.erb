@@ -1,9 +1,26 @@
-<h1>
-  <%= gravatar_for @trainer %>
-  <%= @trainer.name %>
-</h1>
+<div class="trainer_info">
+     <div class ="box1">
+     <p><%= gravatar_for @trainer, size: 130 %></p>
+     </div>
+     
+     <div class ="box2">
+     <p><%= @trainer.name %></p>
+     <p><%= @trainer.profile %></p>
+     
+     <p><%= @trainer.speciality %></p>
+     <p><%= @trainer.sports_type %></p>
+     
+     </div>
+     
+     </div>
+
 
 <%= render 'follow_form' if logged_in? %>
 
+<div id ="signed_plan">
+<h3>登録中のトレーニングプラン</h3>
+</div>
+
 <%= render @training_contents %>
+
 

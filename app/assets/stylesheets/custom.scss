@@ -23,10 +23,16 @@ textarea {
   margin-bottom: 10px;
 }
 
+/*  フロートの解除   */
+.clear {
+  clear: both;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: #696969;
 }
 
 h1 {
@@ -206,4 +212,114 @@ aside {
 
 .gravatar_edit {
   margin-top: 15px;
+}
+
+
+/*  list   */
+div#list {
+  width: 1200px;
+  height: auto;
+}
+
+div#list h2{
+  font-size: 25px;
+  font-weight: 900;
+  margin: 40px;
+  padding-left: 10px;
+  line-height: 25px;
+  
+}
+
+div.training_content_list {
+  width: 223px;
+  height: auto;
+  border: 1px solid #cdcdcd;
+  float: right;
+  margin-right: 60px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+p.list_image{
+  width: 223px;
+  height: 176px;
+}
+
+#list_name{
+  text-align: center;
+}
+
+#trainer_name {
+  text-align: center;
+  border-top: 1px solid #c0c0c0;
+  padding: 5px;
+  color: #808080;
+  
+}
+
+/*  トレーニングプラン詳細 */
+
+#training_content_background {
+  background: #fffff0 !important;
+}
+
+div.training_content_box {
+  float: left;
+	margin: 20px 0;
+	padding: 30px;
+	width: 730px;
+	height: auto;
+	background: #fffff0;
+	color: #696969;
+}
+
+#training_content_top {
+  margin-bottom: 30px;
+}
+
+#training_content_purpose{
+  border-bottom: 1px solid #cdcdcd;
+  
+}
+
+#detail_content {
+  border-top: 1px dotted #cdcdcd;
+  margin-bottom: 30px;
+  
+}
+
+div.trainer_info {
+  border-top: 1px dotted #cdcdcd;
+}
+
+div.box1 {
+  margin: 10px 0;
+  padding: 10px 30px 30px 30px;
+	width: 100px;
+	height: auto;
+  float: left;
+  
+}
+
+div.box2 {
+  margin: 10px 0;
+	padding: 10px 30px 30px 30px;
+	width: 500px;
+	height: auto;
+	float: right;
+	
+}
+
+
+/*  trainer/show/training_content  */
+#signed_plan {
+  padding-top: 200px;
+  border-bottom: 1px dotted #cdcdcd;
+  color: #696969;
+  
+}
+
+div.trainer_training_content{
+  padding: 10px;
+  color: #696969;
 }

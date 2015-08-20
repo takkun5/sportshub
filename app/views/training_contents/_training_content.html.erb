@@ -1,11 +1,5 @@
-<h2>トレーニングプラン</h2>
-<%= training_content.name %>
-<%= training_content.content %>
-<span class="image">
-    <% if training_content.image.present? %>
-     <%= image_tag training_content.image.url  %>
-    <% end %>
-  </span>
+<div class ="trainer_training_content">
+<h3>・<%= training_content.name %><h3>
   
 <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
 
@@ -15,3 +9,4 @@
       <%= link_to "[delete]", training_content, method: :delete,
                                        data: { confirm: "You sure?" } %>
 <% end %>
+</div>

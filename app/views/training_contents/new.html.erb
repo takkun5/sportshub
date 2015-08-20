@@ -1,7 +1,7 @@
 <h1>トレーニングプラン作成</h1>
 
 <% if current_user.training_contents.count >= 3 %>
-    <div>登録できません。</div>
+    <div>3つ以上登録できません。</div>
 <% else %>
    <%= render 'shared/training_content_form'%>
    

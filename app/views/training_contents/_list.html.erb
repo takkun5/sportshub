@@ -1,10 +1,20 @@
+
+<div id ="list">
+<h2>トレーニングプラン一覧</h2>
+     
 <% @training_contents.each do |training_content| %>
-     <%= training_content.name %>
-     <%= link_to "詳細" , training_content, class: "btn btn-info btn-sm" %>
-     <span class="image">
+
+<div class = "training_content_list">
+<p class="list_image">
      <% if training_content.image.present? %>
-     <%= image_tag training_content.image.url  %>
+     <%= image_tag training_content.image.url %>
      <% end %>
-     </span>
-  
+</p>     
+     
+<h4 id ="list_name"><%= link_to training_content.name, training_content %></h4>
+<h5 id ="trainer_name"><%= training_content.trainer.name %></h5>
+
+</div>
+
 <% end %>
+</div>

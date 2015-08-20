@@ -1,7 +1,56 @@
+
 <h1>トレーニングプラン詳細</h1>
 
-<%= @training_content.name %>
-<%= @training_content.content %>
+<div id ="training_content_background">
+
+<div class ="training_content_box">
+
+ <div id ="training_content_top">
+ <p id ="training_content_purpose">
+ <%= @training_content.purpose %>
+ </p>
+    
+ <h2>
+ <%= @training_content.name %>
+ </h2>
+
+ <p class="detail_image">
+     <% if @training_content.image.present? %>
+     <%= image_tag @training_content.image.url %>
+     <% end %>
+ </p>
+ </div>
+
+     <div id ="detail_content">
+     <h2>こんな内容です</h2>
+     <p>
+     <%= @training_content.content %>
+     </p>
+     </div>
+
+     <div id ="content_info">
+     <p><%= @training_content.sports_type %></p>
+     <p><%= @training_content.lengths%></p>
+     <p><%= @training_content.price %></p>
+     </div>
 
 
-
+     <div class="trainer_info">
+     <h2>担当するトレーナー</h2>
+     <div class ="box1">
+     <p><%= gravatar_for @training_content.trainer, size: 130 %></p>
+     </div>
+     
+     <div class ="box2">
+     <p><%= @training_content.trainer.name %></p>
+     <p><%= @training_content.trainer.profile %></p>
+     
+     <p><%= @training_content.trainer.speciality %></p>
+     <p><%= @training_content.trainer.sports_type %></p>
+     
+     </div>
+     
+     </div>
+     
+</div>
+</div>
