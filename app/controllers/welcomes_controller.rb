@@ -27,16 +27,13 @@ class WelcomesController < ApplicationController
   def find
     if logged_in?
       
-    @training_contents = []
-    
-    if request.post? then
-      fstr = params[:fstr]
-      @training_contents = TrainingContent.where("name like ?","%"+ fstr + "%")
-      @training_contents = TrainingContent.where("content like ?","%"+ fstr + "%")
-      @training_contents = TrainingContent.where("sports_type like ?","%"+ fstr + "%")
-      @training_contents = TrainingContent.where("purpose like ?","%"+ fstr + "%")
-    end
-    
+      if request.post? then
+        fstr = params[:fstr]
+        @training_contents = TrainingContent.where("name like ?","%"+ fstr + "%")
+        # @training_contents = TrainingContent.where("content like ?","%"+ fstr + "%")
+        # @training_contents = TrainingContent.where("sports_type like ?","%"+ fstr + "%")
+        # @training_contents = TrainingContent.where("purpose like ?","%"+ fstr + "%")
+      end
     end
   end  
   

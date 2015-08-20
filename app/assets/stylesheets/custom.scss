@@ -243,6 +243,16 @@ div.training_content_list {
 p.list_image{
   width: 223px;
   height: 176px;
+  display: block;
+  overflow: hidden;
+  
+  img{
+    width: 100%;
+  }
+}
+
+.detail_image{
+  text-align:center;
 }
 
 #list_name{
