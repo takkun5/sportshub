@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     end
   end
 
+  # purposeで検索
+  get 'search/:search_word' => 'search#show' , as: :search
+
+
   root to: 'welcomes#home'
   get 'help', to: 'help#home'
   get 'player_signup', to: 'players#new'

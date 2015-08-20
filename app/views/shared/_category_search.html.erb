@@ -1,0 +1,18 @@
+
+<ul class="list-group category_search">
+<% ['リハビリ',
+'栄養管理',
+'筋肉強化',
+'コンディショニング調整',
+'メンタルトレーニング',
+'ダイエット',
+'体重増加',
+'コーチング',
+'その他',
+].each do |purpose| %>
+ <li class="list-group-item">
+     <%= link_to purpose , search_path(purpose) %>
+ </li>
+
+<% end %>
+</ul>
