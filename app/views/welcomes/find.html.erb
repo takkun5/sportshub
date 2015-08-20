@@ -1,0 +1,14 @@
+<h1>result</h1>
+
+<div class="search-result">
+  <% if @training_contents.present? %>
+  
+    <%= render 'training_contents/training_contents', training_contents: @training_contents %>
+    
+  <% elsif params[:fstr].present? %>
+    <div class="alert alert-danger">
+      <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+      検索したプランはありません
+    </div>
+  <% end %>
+</div>

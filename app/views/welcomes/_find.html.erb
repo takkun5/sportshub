@@ -1,0 +1,11 @@
+<% if logged_in? %>
+<div class="search">
+    <%= form_tag find_welcome_path(current_user), method: :post do %>
+    <%= text_field_tag :fstr , params[:fstr], class: "form-control", placeholder: "キーワードを入力", required: true %>
+    <%= submit_tag "プランを探す", name: nil , class: "btn btn-success", data: { disable_with: "検索中..."} %>
+    <% end %>
+</div>
+<div class="clear"></div>
+
+
+<% end %>

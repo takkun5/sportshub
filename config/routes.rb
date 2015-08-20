@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  
+  resources :welcomes do
+    member do
+      post :find
+    end
+  end
 
   root to: 'welcomes#home'
   get 'help', to: 'help#home'
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  
+  resources :welcomes, only: [:home, :find]
   resources :users
   resources :players
   resources :trainers

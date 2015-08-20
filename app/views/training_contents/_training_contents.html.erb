@@ -1,0 +1,17 @@
+<div id ="list">
+<% @training_contents.each do |training_content| %>
+
+<div class = "training_content_list">
+<p class="list_image">
+     <% if training_content.image.present? %>
+     <%= image_tag training_content.image.url %>
+     <% end %>
+</p>     
+     
+<h4 id ="list_name"><%= link_to training_content.name, training_content %></h4>
+<h5 id ="trainer_name"><%= training_content.trainer.name %></h5>
+
+</div>
+
+<% end %>
+</div>
