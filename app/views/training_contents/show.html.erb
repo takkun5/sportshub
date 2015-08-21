@@ -14,11 +14,12 @@
  <%= @training_content.name %>
  </h2>
 
- <p class="detail_image">
+ <div id="detail_image">
      <% if @training_content.image.present? %>
      <%= image_tag @training_content.image.url %>
      <% end %>
- </p>
+ </div>
+ 
  </div>
 
      <div id ="detail_content">

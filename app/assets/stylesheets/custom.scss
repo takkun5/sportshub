@@ -249,9 +249,10 @@ p.list_image{
   display: block;
   overflow: hidden;
   
-  img{
+  img {
     width: 100%;
   }
+
 }
 
 .detail_image{
@@ -290,10 +291,23 @@ div.training_content_box {
   margin-bottom: 30px;
 }
 
+
 #training_content_purpose{
   border-bottom: 1px solid #cdcdcd;
   
 }
+
+#detail_image {
+  width: 600px;
+  height: auto;
+  text-align: center;
+  
+  img {
+    width: 100%;
+    
+  }
+}
+
 
 #detail_content {
   border-top: 1px dotted #cdcdcd;

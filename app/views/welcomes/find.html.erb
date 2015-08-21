@@ -1,4 +1,13 @@
-<h1>result</h1>
+<%= render 'shared/cover' %>
+
+<h1>検索結果</h1>
+
+<div class="col-md-3">
+        <%= render 'welcomes/find' %>
+        <br>
+        <h4>カテゴリーから探す</h4>
+        <%= render 'shared/category_search' %>
+</div>
 
 <div class="search-result">
   <% if @training_contents.present? %>
