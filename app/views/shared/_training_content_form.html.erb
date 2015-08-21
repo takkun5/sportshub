@@ -35,7 +35,7 @@
 'コンディショニング調整',
 'メンタルトレーニング',
 'ダイエット',
-'体重増加',
+'体重増量',
 'コーチング',
 'その他',
 ] ,{ include_blank: 'プランのカテゴリーを選択してください' }, class: 'form-control' %>
@@ -46,7 +46,7 @@
       <%= f.text_field :lengths, class: 'form-control' %>
       </div>
 
-        <%= f.text_area :content, class: 'form-control', placeholder: "提供するサービスの概要を記入してください" %>
+        <%= f.text_area :content, rows: "6", class: 'form-control', placeholder: "提供するサービスの概要を具体的に記入してください。自分のトレーニング方法を動画で公開したい場合は、YouTubeを利用し、URLを掲載してください。" %>
         
         
         <%= f.label :image, 'プランのイメージ写真を添付してください' %>

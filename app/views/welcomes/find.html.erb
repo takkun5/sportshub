@@ -3,6 +3,7 @@
 <h1>検索結果</h1>
 
 <div class="col-md-3">
+        
         <%= render 'welcomes/find' %>
         <br>
         <h4>カテゴリーから探す</h4>
@@ -15,9 +16,11 @@
     <%= render 'training_contents/training_contents', training_contents: @training_contents %>
     
   <% elsif params[:fstr].present? %>
+   <div id ="alert">
     <div class="alert alert-danger">
       <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
       検索したプランはありません
+    </div>
     </div>
   <% end %>
 </div>

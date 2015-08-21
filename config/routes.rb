@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   # purposeで検索
   get 'search/:search_word' => 'search#show' , as: :search
+  
+  # sport_stypeで検索
+  
 
 
   root to: 'welcomes#home'
